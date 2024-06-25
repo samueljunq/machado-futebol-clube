@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/brasao.png" type="image/x-icon">
+    <title>Machado Futebol Clube</title>
+</head>
+
+<body>
+    
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <header style="background-image: url('img/tela-inicial.png')">
+        <div class="container">
+            <!-- <div id="navbar-container"></div> -->
+            <nav>
+                <a href="index.html">
+                    <img src="img/logo.png" alt="logo" width="250" height="250">
+                </a>
+                <ul class="ul">
+                    <a href="governanca.html">Governança</a>
+                    <a href="ouvidoria.html">Ouvidoria</a>
+                    <a href="transparencia.html">Transparência</a>
+                    <a href="perguntas.html">Perguntas-Frequentes</a>
+                    <a class="btn" href="https://api.whatsapp.com/send?phone=5535997407103">Contato</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <i class="fa fa-times-circle"></i>
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </nav>
+            <section class="banner">
+                <div class="banner-text">
+                    <h1>Machado Futebol Clube</h1>
+                    <p>Preparando Atletas Para o Futuro</p>
+                    <a href="contato.html" class="btn animate-btn">Entre em contato</a>
+                </div>
+            </section>
+        </div>
+    </header>
+
+    <section class="sectionSearch">
+        <h3>O que você precisa?</h3>
+        <div class="divSearch">
+            <div class="search-container">
+                <input id="searchbar" type="text" name="search" placeholder="Busca"
+                    onkeydown="if(event.key === 'Enter') search()">
+                <button onclick="search()"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+        <p>Pesquise no site</p>
+    </section>
+
+    <section class="separa">
+        <div class="bolinha"></div>
+        <div class="bolinha"></div>
+        <div class="bolinha"></div>
+    </section>
+
+    <!--Sobre nós-->
+    <section class="faca-mais sectionSobre">
+        <div class="container">
+            <div class="faca-mais-text">
+                <h3 class="itens">Sobre nós</h3>
+                <p>
+                    Uma instituição sem fins lucrativos que utiliza o esporte como ferramenta para
+                    promover o desenvolvimento educacional, físico e social de crianças, adolescentes
+                    e adultos, além de proporcionar vivências culturais, ambientais e cívicas. Seu objetivo
+                    é contribuir para o bem-estar e saúde, assegurando o desenvolvimento de cidadãos com consciência
+                    social e crítica.
+                </p>
+                <a href="ouvidoria.html" class="btn animate-btn">Entre em contato</a>
+            </div>
+            <div class="faca-mais-img">
+                <img src="img/IMG-1.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!--Sobre nós - final-->
+
+    <!--Depoimentos-->
+    <section class="faca-mais">
+        <div class="container">
+            <div class="faca-mais-img">
+                <img src="img/MATHEUS.png" alt="">
+            </div>
+            <div class="faca-mais-text">
+                <h3 class="itens">Depoimento</h3>
+                <p>
+                    "O Machado Futebol Clube representa uma oportunidade singular para jovens talentos.
+                    Tenho participado dos treinamentos e experimentado um notável progresso, tanto no futebol
+                    quanto em minha vida pessoal. Recomendo a todos esta experiência enriquecedora."
+                </p>
+                <h5>Mateus Magalhães</h5>
+                <a href="ouvidoria.html" class="btn animate-btn">Entre em contato</a>
+            </div>
+        </div>
+    </section>
+
+    <!--Patrocinadores-->
+    <section class="patrocinio">
+        <div class="container">
+            <h3 class="itens">Patrocinadores</h3>
+            <p>"Tudo o que um sonho precisa para ser realizado é alguém que acredite que ele possa ser realizado."</p>
+            <div class="cards">
+                <div class="card-item">
+                    <a href="https://www.instagram.com/eisacafe/"><img src="img/eisa.png" alt="eisa" width="250" height="250"></a>
+                    <p class="nome-user">EISA</p>
+                    <p class="resumo">A EISA é uma multinacional com 168 anos
+                        de atuação no Agronegócio. Tem diversos escritórios no Brasil
+                        e grande expertise no comércio e beneficiamento de café, algodão e açúcar.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--end-Patrocinadores-->
+    <div id="footer-container"></div>
+
+    <footer class="footer">
+        <div class="links">
+            <a href="https://www.instagram.com/machadofutebolclube/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=5535997407103"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+        </div>
+        <p>© Copyright 2024 Machado Futebol Clube - Todos os direitos reservados.</p>
+        <p>Desenvolvido por Ax Company</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/navbar.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchTerm = urlParams.get('search');
+            if (searchTerm) {
+                let items = document.getElementsByClassName('itens');
+                for (let i = 0; i < items.length; i++) {
+                    items[i].classList.remove('foundSearchStart', 'foundSearchEnd');
+                    if (items[i].innerText.toLowerCase().includes(searchTerm)) {
+                        items[i].style.display = "block";
+                        items[i].scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        items[i].classList.add('foundSearchStart');
+                        setTimeout(function () {
+                            items[i].classList.remove('foundSearchStart');
+                            items[i].classList.add('foundSearchEnd');
+                        }, 2000);
+                        break;
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

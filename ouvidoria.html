@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/brasao.png" type="image/x-icon">
+    <title>Ouvidoria | Machado Futebol Clube</title>
+</head>
+
+<body>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <header style="background-image: url('img/limpa.png')">
+        <div class="container">
+            <!-- <div id="navbar-container"></div> -->
+            <nav>
+                <a href="index.html">
+                    <img src="img/logo.png" alt="logo" width="250" height="250">
+                </a>
+                <ul class="ul">
+                    <a href="governanca.html">Governança</a>
+                    <a href="ouvidoria.html">Ouvidoria</a>
+                    <a href="transparencia.html">Transparência</a>
+                    <a href="perguntas.html">Perguntas-Frequentes</a>
+                    <a class="btn" href="https://api.whatsapp.com/send?phone=5535997407103">Contato</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <i class="fa fa-times-circle"></i>
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </nav>
+            <section class="banner">
+                <div class="banner-text">
+                    <h1 class="itens">Ouvidoria do Clube</h1>
+                    <p>Preparando Atletas Para o Futuro</p>
+                    <a href="contato.html" class="btn animate-btn">Entre em contato</a>
+                </div>
+            </section>
+        </div>
+    </header>
+    <section class="sobre">
+        <div class="container">
+            <div class="sobre-text">
+                <h3>Contato</h3>
+                <form action="https://api.staticforms.xyz/submit" method="post">
+                    <label>Nome</label>
+                    <input type="text" nome="name" placeholder="Digite seu nome" autocomplete="off">
+                    <label>Email</label>
+                    <input type="email" nome="email" placeholder="Digite seu e-mail">
+                    <label>Mensagem</label>
+                    <input type="text" nome="message" cols="30" rows="10" placeholder="Digite sua mensagem">
+                    <button type="submit">Enviar</button>
+
+                    <input type="hidden" name="accessKey" value="ef6ce174-77e1-43dc-80e8-0338489addb1">
+                    <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/obrigado.html">
+                </form>
+            </div>
+            <div class="sobre-img">
+                <div class="mapBox">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d6236.200079913496!2d-45.95227372259523!3d-21.661260519643296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sEstrada%20bairro%20dos%20caixetas%2C%20S%2Fn%20-%20Caixetas%2C%20Machado%20-%20MG%2C%2037750-000!5e0!3m2!1spt-BR!2sbr!4v1716423849075!5m2!1spt-BR!2sbr"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="footer-container">
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/navbar.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchTerm = urlParams.get('search');
+            if (searchTerm) {
+                let items = document.getElementsByClassName('itens');
+
+                for (let i = 0; i < items.length; i++) {
+                    items[i].classList.remove('foundSearchStart', 'foundSearchEnd');
+
+                    if (items[i].innerText.toLowerCase().includes(searchTerm)) {
+                        items[i].style.display = "block";
+                        items[i].scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                        items[i].classList.add('foundSearchStart');
+                        setTimeout(function () {
+                            items[i].classList.remove('foundSearchStart');
+                            items[i].classList.add('foundSearchEnd');
+                        }, 2000);
+                        break;
+                    }
+                }
+            }
+        });
+    </script>
+    </section>
+    <footer class="footer">
+        <div class="links">
+            <a href="https://www.instagram.com/machadofutebolclube/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=5535997407103"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+        </div>
+        <p>© Copyright 2024 Machado Futebol Clube - Todos os direitos reservados.</p>
+        <p>Desenvolvido por Ax Company</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

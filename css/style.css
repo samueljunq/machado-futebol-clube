@@ -1,0 +1,684 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Danfo&family=Inter:wght@100..900&family=Jaro:opsz@6..72&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f1f6fc31;
+}
+
+section,
+footer {
+    padding: 54px 0;
+}
+
+h1 {
+    font-size: 50px;
+    /* Ajuste o tamanho do texto conforme necessário */
+    color: transparent;
+    /* Tornar o texto transparente */
+    -webkit-text-stroke: 2px #4785b5;
+    /* Adicionar contorno */
+    -webkit-text-fill-color: #E4E2DD;
+    /* Cor do texto */
+}
+
+h3 {
+    font-size: 50px;
+}
+
+p {
+    color: #0000009c;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%
+}
+
+.btn {
+    background-color: #4785b5;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+.btn.animate-btn {
+    animation: animate-outline 1s ease-out infinite;
+    animation-fill-mode: both;
+}
+
+.btn:hover {
+    background-color: #3580db;
+}
+
+@keyframes animate-outline {
+    from {
+        outline: 0px solid #343390;
+    }
+
+    to {
+        outline: 14px solid #4f9bf900;
+    }
+}
+
+header {
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul a {
+    color: white;
+    margin: 0 25px;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+}
+
+nav ul a:not(.btn):after {
+    content: "";
+    background-color: #4885b4;
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin: 0 auto;
+    transition: 0.5s;
+}
+
+nav ul a:hover::after {
+    width: 100%;
+}
+
+/*menu mobile*/
+nav .menu-icon {
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+    display: none;
+}
+
+nav .close-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+}
+
+.banner .banner-text {
+    margin: 150px;
+    text-align: center;
+    padding: 0 90px;
+}
+
+.banner .banner-text h1 {
+    font-family: 'Jaro', sans-serif;
+    font-size: 96px;
+    color: white;
+}
+
+.banner .banner-text p {
+    font-family: 'Jaro', sans-serif;
+    font-size: 20px;
+    color: #ffffffb7;
+    font-weight: lighter;
+    margin: 18px 0;
+}
+
+/*Sobre nos*/
+.faca-mais .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Isso fará com que os elementos fiquem um ao lado do outro */
+    flex-wrap: wrap; /* Permite que os elementos quebrem para a próxima linha em telas menores */
+}
+
+.faca-mais .faca-mais-text {
+    width: calc(50% - 20px); /* Isso garante que cada elemento ocupe metade do espaço disponível, com um espaço de 20px entre eles */
+    margin-right: 20px; /* Espaçamento entre os elementos */
+}
+
+.faca-mais .faca-mais-text h3 {
+    font-size: 56px;
+}
+
+.faca-mais .faca-mais-text h5 {
+    font-size: 18px;
+    font-style: italic;
+    margin: 15px 0 25px 0;
+}
+
+.faca-mais .faca-mais-text p {
+    margin: 15px 0 25px 0;
+}
+
+.faca-mais .faca-mais-img {
+    width: calc(50% - 20px); /* Isso garante que cada elemento ocupe metade do espaço disponível, com um espaço de 20px entre eles */
+}
+
+.faca-mais .faca-mais-img img {
+    width: 100%;
+    border-radius: 100px;
+}
+
+.faca-mais-text p {
+    text-align: justify;
+}
+
+/*Div separa*/
+
+.separa {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0;
+}
+/* bolinha animacao*/
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+.bolinha {
+    width: 25px;
+    height: 25px;
+    background-color: #4785b5;
+    margin: 25px;
+    border-radius: 50px;
+    animation: bounce 2s infinite;
+}
+
+.bolinha:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.bolinha:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.bolinha:nth-child(3) {
+    animation-delay: 1s;
+}
+
+
+/* ---------------- */
+
+.sectionSobre {
+    padding-top: 0;
+
+}
+
+.patrocinio h3 {
+    text-align: center;
+}
+
+.patrocinio p {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+}
+
+.cards-colegiado {
+    display: flex;
+    justify-content: center;
+}
+
+.cards-colegiado {
+    text-align: center;
+    /* Centralizar horizontalmente */
+}
+
+.card-colegiado-item p {
+    font-weight: lighter;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+.card-colegiado-item p b {
+    font-weight: bold;
+    /* Mantém o texto em negrito */
+}
+
+.card-colegiado-item {
+    border-radius: 15px;
+    width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.card-colegiado-item img {
+    border-radius: 15px;
+    width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.patrocinio .card-item {
+    background-color: #3A6604;
+    margin: 25px;
+    border-radius: 30px;
+    text-align: center;
+    width: 1000px;
+    transition: 0.4s;
+}
+
+.patrocinio .card-item img {
+    border-radius: 200px;
+    width: 250px;
+    display: block;
+    margin: 10px auto;
+}
+
+.patrocinio .card-item .nome-user {
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 15;
+    color: white;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.patrocinio .card-item .resumo {
+    font-size: 15px;
+    padding: 0 15px;
+    color: white;
+    transition: 0.4s;
+}
+
+.patrocinio .card-item .coffe {
+    margin: 15px -5px;
+    color: white;
+    transition: 0.4s;
+}
+
+.patrocinio .card-item:hover {
+    background-color: #223907;
+    margin-top: -5px;
+}
+
+.patrocinio .card-item:hover .nome-user,
+.resumo .card-item:hover .resumo-user,
+.patrocinio .card-item:hover .coffe {
+    color: #3A6604;
+}
+
+.footer {
+    background-color: #3257a8;
+    text-align: center;
+}
+
+.footer i {
+    color: #3257a8;
+    font-size: 19px;
+    background-color: white;
+    padding: 10px;
+    margin: 3px;
+    border-radius: 10px;
+}
+
+.footer p {
+    margin-top: 10px;
+    color: white;
+}
+
+
+/*Pagina governanca*/
+.sobre .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sobre .sobre-text {
+    width: 45%;
+}
+
+.sobre .sobre-text p {
+    margin: 18px 0;
+    color: #000000a6;
+}
+
+.sobre .sobre-img {
+    width: 50%;
+}
+
+.sobre .sobre-img img {
+    width: 100%;
+    max-width: none;
+    border-radius: 100px;
+}
+
+.faca-mais-text h6 {
+    color: #000000a6;
+    font-style: italic;
+}
+
+.sobre-text {
+    width: calc(50% - 10px);
+    margin-right: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-text form {
+    width: 100%;
+}
+
+.sobre-text form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.sobre-text form input[type="text"],
+.sobre-text form input[type="email"],
+.sobre-text form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.faca-mais-text h6 {
+    color: #000000a6;
+    /* Definindo a cor para os elementos h6 */
+    font-style: italic;
+    /* Adicionando itálico aos elementos h6 */
+}
+
+.sobre-text form textarea {
+    resize: vertical;
+}
+
+.sobre-text form button {
+    width: calc(100% - 20px);
+    background-color: #4785b5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sobre-text form button:hover {
+    background-color: #3580db;
+}
+
+.sobre-text form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000000;
+    font-weight: bold;
+}
+
+/*governanca-botoes*/
+/* Centralizar texto */
+.btn-projetos {
+    background-color: #4785b5;
+    color: white;
+    padding: 8px 12px;
+    /* Diminuir ainda mais o tamanho do botão */
+    border-radius: 25px;
+    /* Tornar os botões mais arredondados */
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.2s;
+    font-weight: bold;
+    margin: 5px;
+    /* Espaçamento entre os botões */
+    text-align: center;
+}
+
+.btn-projetos.animate-btn {
+    animation: animate-outline 1s ease-out infinite;
+    animation-fill-mode: both;
+}
+
+/* Remove o efeito de hover */
+.btn-projetos:hover {
+    background-color: #4785b5;
+}
+
+/* Ajuste para o layout flex da seção Projetos Públicos */
+.projetos-publicos .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.projetos-content {
+    display: flex;
+    flex-direction: column;
+    /* Organiza os elementos em coluna */
+    width: 100%;
+    align-items: center;
+    /* Centraliza o conteúdo horizontalmente */
+    text-align: center;
+    /* Centraliza o texto */
+}
+
+.projetos-text {
+    margin-bottom: 20px;
+    /* Espaçamento entre texto e botões */
+}
+/* faça mais img com animacao */
+.faca-mais-img {
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os botões quebrem para a próxima linha */
+    justify-content: center;
+    /* Centraliza os botões horizontalmente */
+    margin-bottom: 20px;
+}
+
+.faca-mais-img .btn-projetos {
+    width: 250px;
+    /* Diminuir a largura dos botões */
+    box-sizing: border-box;
+    /* Garante que o padding e border não afetem a largura */
+    padding: 8px 12px;
+}
+@keyframes vibrate {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    20%, 60% {
+        transform: translateX(-5px);
+    }
+    40%, 80% {
+        transform: translateX(5px);
+    }
+}
+.faca-mais-img img {
+    animation: fadeInRight 1s ease-in-out forwards;
+}
+.faca-mais-img img:hover {
+    animation: vibrate 0.3s linear;
+}
+.faca-mais-img img.vibrate {
+    animation: vibrate 0.3s linear;
+}
+/* final-faça mais img com animacao */
+.projetos-publicos h3 {
+    margin-bottom: 30px;
+    /* Adiciona espaço entre o título "Projetos Públicos" e a caixa de botões */
+}
+
+.projetos-publicos h5 {
+    font-size: 20px;
+    /* Ajusta o tamanho da fonte do h5 */
+}
+
+/*governanca-botoes-end*/
+/*end Pagina governanca*/
+/*mapa*/
+.mapBox {
+    width: 100%;
+    height: 400px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.mapBox iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/*end-mapa*/
+/*Section de Busca */
+.divSearch {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.sectionSearch {
+    text-align: center;
+    padding-bottom: 0;
+}
+
+.sectionSearch h3 {
+    padding-bottom: 20px;
+}
+
+.sectionSearch p {
+    padding: 10px;
+}
+
+#searchbar {
+    border: 2px solid #4785b5;
+}
+
+/*Barra de pesquisa*/
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type="text"] {
+    padding: 15px;
+    width: 600px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.search-container input[type="text"].focused::selection {
+    background: #4785b5;
+    color: black;
+}
+
+.search-container button {
+    padding: 18px;
+    background-color: #4785b5;
+    color: white;
+    border: 1px solid #4785b5;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+
+.search-container button:hover {
+    background-color: #4785b5;
+}
+
+.foundSearchStart {
+    background-color: #4785b5;
+}
+
+.foundSearchEnd {
+    background-color: #fff;
+    transition: background-color 0.5s ease;
+}
+
+/* libras */
+
+/*Barra navegacao*/
+@media(max-width: 830px) {
+
+    /*menu mobile*/
+    .ul {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #3257a8;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        clip-path: circle(0% at 100% 0);
+        transition: 0.7s;
+    }
+
+    .ul.open {
+        clip-path: circle(141.4% at 100% 0);
+    }
+
+    .ul a {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    nav .menu-icon {
+        display: block;
+    }
+
+    nav .close-icon {
+        display: block;
+        position: absolute;
+        top: 46px;
+        right: 28px;
+    }
+}
