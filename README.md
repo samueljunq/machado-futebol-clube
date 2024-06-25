@@ -1,13 +1,13 @@
 # Machado Futebol Clube - Website
 
-![Logo](image/LOGO_ALIANCA.png)
+![Logo](img/brasao.png)
 
 ## Sobre o Projeto
 
 O site do Machado Futebol Clube foi desenvolvido com o objetivo de criar uma experiência moderna e inovadora, totalmente diferente dos tradicionais sites institucionais. O design foi cuidadosamente elaborado para ser visualmente atraente e funcional, proporcionando uma navegação intuitiva e envolvente para os usuários.
 
-![Home Page](image/tela-inicial.png)
-![Home Page Mobile](image/tela-inicial-mobile.png)
+![Home Page](tela-inicial.png)
+![Home Page Mobile](tela-inicial-mobile.png)
 
 ## Tecnologias Utilizadas
 
@@ -60,7 +60,7 @@ Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICEN
 
 Gostaríamos de agradecer ao Colégio Aliança pela oportunidade de desenvolver este projeto.
 
-![Footer Image](image/LOGO_ALIANCA.png)
+![Footer Image](img/brasao.png)
 
 ---
 
